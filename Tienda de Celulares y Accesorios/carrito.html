@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - Tienda de Celulares</title>
+    <link href="https://fonts.googleapis.com/css2?family=Happy+Memories&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="novedades.html">Novedades</a></li>
+                <li><a href="informacion.html">Información</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrito.html" class="active">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="cart-container">
+        <div class="cart-header">
+            <h1>Tu Carrito</h1>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-total" id="cartTotal"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tienda de Celulares - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+        function renderCarrito() {
+            const cartItems = document.getElementById("cartItems");
+            const cartTotal = document.getElementById("cartTotal");
+            cartItems.innerHTML = "";
+            if (carrito.length === 0) {
+                cartItems.innerHTML = "<p>No tienes productos en el carrito.</p>";
+                cartTotal.innerHTML = "";
+                return;
+            }
+
+            let total = 0;
+            carrito.forEach((producto, index) => {
+                total += producto.precio;
+                cartItems.innerHTML += `
+                    <div class="cart-item" id="producto-${index}">
+                        <img src="${producto.imagen}" alt="${producto.nombre}">
+                        <div class="cart-item-info">
+                            <h3>${producto.nombre}</h3>
+                            <p>Precio: $${producto.precio}</p>
+                        </div>
+                        <div class="cart-item-actions">
+                            <button onclick="eliminarDelCarrito(${index})">Eliminar</button>
+                        </div>
+                    </div>
+                `;
+            });
+            cartTotal.innerHTML = `<p>Total: $${total.toFixed(2)}</p>`;
+        }
+
+        function eliminarDelCarrito(index) {
+            carrito.splice(index, 1);
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            renderCarrito();
+        }
+
+        renderCarrito();
+    </script>
+</body>
+</html>
