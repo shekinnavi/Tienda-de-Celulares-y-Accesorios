@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas - Tienda de Celulares</title>
+    <link href="https://fonts.googleapis.com/css2?family=Happy+Memories&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="ofertas.html" class="active">Ofertas</a></li>
+                <li><a href="novedades.html">Novedades</a></li>
+                <li><a href="informacion.html">Información</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Ofertas Especiales</h1>
+        <div class="product-list">
+            <div class="product">
+                <img src="https://phonebox.com.mt/wp-content/uploads/2022/10/0021391_iphone-14.jpeg" alt="iPhone 14">
+                <h3>iPhone 14</h3>
+                <div class="price">Precio: <del>$999</del> $899</div>
+                <button onclick="agregarCarrito('iPhone 14')">Agregar al carrito</button>
+            </div>
+            <div class="product">
+                <img src="https://supercells.co.za/wp-content/uploads/2022/05/samsung-galaxy-S22-Pink-Gold.jpg" alt="Samsung Galaxy S22">
+                <h3>Samsung Galaxy S22</h3>
+                <div class="price">Precio: <del>$799</del> $699</div>
+                <button onclick="agregarCarrito('Samsung Galaxy S22')">Agregar al carrito</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tienda de Celulares - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        function agregarCarrito(producto) {
+            alert(`El producto ${producto} se ha agregado al carrito.`);
+        }
+    </script>
+</body>
+</html>

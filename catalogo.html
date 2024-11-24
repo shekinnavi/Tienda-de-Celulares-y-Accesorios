@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Tienda de Celulares</title>
+    <link href="https://fonts.googleapis.com/css2?family=Happy+Memories&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html" class="active">Catálogo</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="novedades.html">Novedades</a></li>
+                <li><a href="informacion.html">Información</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Catálogo de Celulares</h1>
+        <div class="product-list">
+            <!-- Producto 1 -->
+            <div class="product">
+                <img src="https://phonebox.com.mt/wp-content/uploads/2022/10/0021391_iphone-14.jpeg" alt="iPhone 14">
+                <h3>iPhone 14</h3>
+                <div class="price">Precio: $999</div>
+                <button onclick="agregarCarrito('iPhone 14', 999, 'https://phonebox.com.mt/wp-content/uploads/2022/10/0021391_iphone-14.jpeg')">Agregar al carrito</button>
+            </div>            
+
+            <!-- Producto 2 -->
+            <div class="product">
+                <img src="https://supercells.co.za/wp-content/uploads/2022/05/samsung-galaxy-S22-Pink-Gold.jpg" alt="Samsung Galaxy S22">
+                <h3>Samsung Galaxy S22</h3>
+                <div class="price">Precio: $799</div>
+                <button onclick="agregarCarrito('Samsung Galaxy S22')">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="product">
+                <img src="https://www.trikart.com/media/catalog/product/s/a/samsung-z-flip-4-pink-gold_1_2.jpg" alt="Samsung Galaxy Z Flip 1">
+                <h3>Samsung Galaxy Z Flip 1</h3>
+                <div class="price">Precio: $999</div>
+                <button onclick="agregarCarrito('Samsung Galaxy Z Flip 1')">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="product">
+                <img src="https://www.gizmochina.com/wp-content/uploads/2020/12/oneplus9-1.jpg" alt="OnePlus 9">
+                <h3>OnePlus 9</h3>
+                <div class="price">Precio: $749</div>
+                <button onclick="agregarCarrito('OnePlus 9')">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 5 -->
+            <div class="product">
+                <img src="https://th.bing.com/th/id/OIP.2Wt4D6Dx3h1QfzKhiGXaOwAAAA?rs=1&pid=ImgDetMain" alt="Motorola Moto G24 Lavanda">
+                <h3>Motorola Moto G24 Lavanda</h3>
+                <div class="price">Precio: $499</div>
+                <button onclick="agregarCarrito('Motorola Moto G24 Lavanda')">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 6 -->
+            <div class="product">
+                <img src="https://asset.conrad.com/media10/isa/160267/c1/-/en/002384507PI00/image.jpg" alt="Samsung Galaxy A22">
+                <h3>Samsung Galaxy A22</h3>
+                <div class="price">Precio: $299</div>
+                <button onclick="agregarCarrito('Samsung Galaxy A22')">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 7 -->
+            <div class="product">
+                <img src="https://i5.walmartimages.com/asr/04e8ba3f-6995-4857-ae67-7933f5c78cfa.cdfdebbfbc629da9cc8088880797c8b7.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF" alt="Xiaomi Mi 12 ">
+                <h3>Xiaomi Mi 12</h3>
+                <div class="price">Precio: $699</div>
+                <button onclick="agregarCarrito('Xiaomi Mi 12')">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 8 -->
+            <div class="product">
+                <img src="https://i5.walmartimages.com.mx/samsmx/images/product-images/img_large/981007948l.jpg?odnHeight=612&odnWidth=612&odnBg=FFFFFF" alt="Samsung Galaxy S23 Ultra">
+                <h3>Samsung Galaxy S23 Ultra</h3>
+                <div class="price">Precio: $599</div>
+                <button onclick="agregarCarrito('Samsung Galaxy S23 Ultra')">Agregar al carrito</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tienda de Celulares - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        function agregarCarrito(producto) {
+            alert(`El producto ${producto} se ha agregado al carrito.`);
+        }
+    </script>
+</body>
+</html>
